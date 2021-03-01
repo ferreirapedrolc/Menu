@@ -1,0 +1,128 @@
+body {
+  --header-height: 50px;
+
+  margin: var(--header-height) 0 0 0;
+  font-family: sans-serif;
+  background-color: rgb(38, 71, 59);
+}
+
+.preload * {
+  transition: none !important;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--header-height);
+  height: var(--header-height);
+  background: #333333;
+  display: flex;
+}
+
+.header__button {
+  width: var(--header-height);
+  flex-shrink: 0;
+  background: none;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.nav__links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 150px;
+  background: rgb(38, 71, 59);
+  transform: translateX(-250px);
+  transition: transform 0.3s;
+}
+
+.nav--open .nav__links {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  color: rgb(86, 163, 135);
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 12px 15px;
+  background: transform 0.2s;
+}
+
+.nav__link > i {
+  margin-right: 15px;
+}
+
+.nav__link--active {
+  color: #009578;
+}
+
+.nav__link--active,
+.nav__link:hover {
+  background: #eeeeee;
+}
+
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav--open .nav__overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+#menu {
+  margin: 40px;
+  text-overflow: ellipsis;
+  text-align: center;
+  
+  
+  
+  
+}
+
+.menu h2 {
+  padding: 1.2em;
+  color: rgb(86, 163, 135);
+
+} 
+
+.menu h3 {
+  margin: 0.6em;
+  color: white;
+}
+
+#menu pre {
+  font-family: arial;
+  margin: 0 auto;
+  padding: 0.4em;
+  color: rgba(255, 255, 255, 0.616);
+  max-width: 300px;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: pre-wrap;
+  line-height: 1.6em;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: ivory;
+}

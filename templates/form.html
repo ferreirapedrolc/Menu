@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    
+    <form action="/form" METHOD="POST">
+        <h1>formulário de produtos</h1>
+        <input name="produto" type="text" placeholder="Produto"><br>
+        <textarea name="desc" cols="50" rows="10" placeholder="Descrição"></textarea><br>
+        <input name="preco" type="text" placeholder="Preço"><br>
+        <select name="cat" >
+            <option value="null">Categoria</option>
+            <option value="antipasto">Antipasto</option>
+            <option value="mini bruschettas">Bruschettas</option>
+            <option value="salumeria">Salumeria</option>
+            <option value="queijos">Queijos</option>
+            <option value="burger sliders">Burguer Sliders</option>
+            <option value="paninis & sandwiches">Paninis</option>
+            <option value="no forno">No Forno</option>
+            <option value="sobremesas">Sobremesas</option>
+        </select>
+        <input type="submit" value="Salvar">
+    </form>
+    <br>
+    <div>
+        {% for prod in dados %}
+            <h2>{{ prod[0] }}</h2>
+        {% endfor %}
+    </div>
+
+
+</body>
+</html>

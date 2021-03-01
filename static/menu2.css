@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(38, 71, 59);
+}
+
+body {
+    background-color: #f9f9f9;
+
+}
+
+#check {
+    display: none;
+}
+
+#icone {
+    
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+#ico {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 5px;
+}
+
+.barra {
+    background-color: #333;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+
+}
+
+nav a {
+    text-decoration: none;
+
+}
+
+.link {
+    background-color: #494950;
+    padding: 20px;
+    font-family: arial;
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+
+}
+
+.link:hover{
+    background-color: #050542;
+
+}
+
+#check:checked ~ .barra {
+    transform: translateX(300px);
+}
+
+#check:checked ~ .barra nav a .link {
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: .2s;
+}
+
+#menu {
+    margin: 40px;
+    text-overflow: ellipsis;
+    text-align: center;
+    
+    
+    
+    
+}
+
+.menu h2 {
+    margin: 1.2em;
+    color: rgb(86, 163, 135);
+
+} 
+
+.menu h3 {
+    margin: 0.8em;
+    color: white;
+}
+
+#menu p {
+    margin: 0 auto;
+    padding: 0.4em;
+    color: rgba(255, 255, 255, 0.616);
+    max-width: 300px;
+    text-overflow: ellipsis;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: ivory;
+}
